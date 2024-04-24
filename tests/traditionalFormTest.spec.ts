@@ -2,7 +2,6 @@ import { test, expect } from '@playwright/test';
 
 test.describe('Traditional Form Submission', () => {
     test('Submit Personal Information Form using Playwright', async ({ page }) => {
-        test.setTimeout(60000);
         await page.goto('http://localhost:8501/');
 
         // Fill the personal information form fields

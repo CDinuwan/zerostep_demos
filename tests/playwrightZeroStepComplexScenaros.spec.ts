@@ -3,7 +3,6 @@ import { test } from './test-with-fixture';
 
 test.describe('EA Website Testing', () => {
     test('book the next available timeslot', async ({page, ai}) => {
-        test.setTimeout(90000);
         await page.goto('http://eaapp.somee.com');
 
         await ai('Click on the Login link');

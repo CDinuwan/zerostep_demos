@@ -3,7 +3,6 @@ import { test } from './test-with-fixture';
 
 test.describe('EA Website Testing', () => {
     test.only('book the next available timeslot', async ({page, ai}) => {
-        test.setTimeout(90000);
         await page.goto('http://eaapp.somee.com')
 
         await expect(page).toHaveScreenshot();
@@ -29,7 +28,6 @@ test.describe('Google', () => {
     const searchTerm = 'software testing'
 
     test('search and verify the first organic search result', async ({ page, ai }) => {
-        test.setTimeout(90000);
         await page.goto('https://www.google.com')
 
         await ai(`Search for '${searchTerm}'`)
@@ -45,7 +43,6 @@ test.describe('Google', () => {
 
 test.describe('New York Times', () => {
     test('go to section and verify ad is displayed', async ({ page, ai }) => {
-        test.setTimeout(90000);
         await page.goto('https://www.nytimes.com')
 
         await ai(`Hover over the World top nav item`)
