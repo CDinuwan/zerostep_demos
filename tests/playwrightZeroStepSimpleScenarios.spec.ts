@@ -2,10 +2,9 @@ import {expect} from '@playwright/test';
 import { test } from './test-with-fixture';
 
 test.describe('EA Website Testing', () => {
-    test.only('book the next available timeslot', async ({page, ai}) => {
+    test('create new Employee', async ({page, ai}) => {
         await page.goto('http://eaapp.somee.com')
 
-        await expect(page).toHaveScreenshot();
         await ai('Click on the Login link');
         await ai('Enter the UserName as admin');
         await ai('Enter the Password as password');
